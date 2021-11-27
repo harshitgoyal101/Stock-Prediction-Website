@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+      body 
+      {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+      body {
+  overflow: hidden; /* Hide scrollbars */
+}
+        
+      html 
+      {
+        box-sizing: border-box;
+      }
+
+      *, *:before, *:after 
+      {
+        box-sizing: inherit;
+      }
+        
+      .header
+      {
+        width: 100%;
+        height: 80px;
+        display: block;
+        background-color: #333;
+        padding-left: 43%;
+      }
+
+      .inner_header
+      {
+        width:1000px;
+        height: 100%;
+        display: block;
+        margin:0 auto;
+      }
+
+      .logo_container
+      {
+        height: 100%;
+        display: table;
+        float: left;
+      }
+
+      .logo_container h1
+      {
+        color: white;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        font-family: 'Montserrat';
+        font-size: 32px;
+        font-weight: 200;
+      }
+
+      .logo_container h1 span
+      {
+        font-weight: 800;
+      }
+
+      .navigation
+      {
+        float: right;
+        height: 100%;
+      }
+
+      .navigation a
+      {
+        height: 100%;
+        display: table;
+        float: left;
+        padding: 0px 20px;
+      }
+
+      .navigation a li
+      {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        color: white;
+        font-family: 'Montserrat';
+        font-size: 16px;
+      }
+
+      .about-section 
+      {
+        padding: 10px 250px 50px 250px;
+        text-align: center;
+        font-size:18px;
+        background-color: #474e5d;
+        color: white;
+        font-family: 'Poppins'
+      }
+
+      .team
+      {
+        font-size: 110%;
+        font-family: 'Montserrat';
+      }
+      .ps
+      {
+        margin-bottom: 60px;
+        padding: 50px 0px 0px 145px;
+      }
+      .ps a
+      {
+        display: inline-block;
+        margin: 0 30px;
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+      .ps a img
+      {
+        width: 100%;
+        filter: grayscale(100%);
+        transition: 0.4s all; 
+      }
+      .ps a:hover > img
+      {
+        filter: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="header">
+      <div class="inner_header">
+        <div class="logo_container">
+          <h1>CapStone<span>Project</span></h1>
+        </div>
+
+        <div style="margin-left:400px;margin-top:15px;"class="logo_container">
+          <a href="{{ url_for('index') }}" style=" text-decoration: none;"><h1><span>Home</span></h1></a>
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>Stocks Prediction is an online platform built on flask which uses concepts of machine learning such as neural network to predict the movement of stock prize to help user chose to buy or less the stocks accordingly.
+        </p>
+    </div>
+    
+    <div class="team">
+      <h1 style="text-align:center">Our Team</h1>
+    </div>  
+  
+    <div class="ps">
+     <a><img src="{{url_for('static', filename='name1.jpeg')}}"></a>
+      <a><img src="{{url_for('static', filename='name2.jpeg')}}"></a>
+      <a><img src="{{url_for('static', filename='name3.jpeg')}}"></a>
+      <a><img src="{{url_for('static', filename='name4.jpeg')}}"></a>
+    </div>
+</body>
+</html>
